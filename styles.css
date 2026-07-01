@@ -171,8 +171,16 @@ code {
 .closing h2 { font-size: clamp(2rem, 4.6vw, 3rem); margin: 0 0 18px; }
 .closing p { max-width: 600px; margin: 0 auto 30px; color: var(--mist); font-size: 1.12rem; }
 .closing .appstore-badge { border-color: rgba(255,255,255,0.2); }
-.closing-support { margin-top: 34px; color: #94A3B8; font-size: 1rem; }
+.closing-support { margin-top: 26px; color: #94A3B8; font-size: 1rem; }
 .closing-support a { color: var(--green-light); font-weight: 600; }
+.coffee-btn {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 14px;
+  background: #FFDD00; color: #0a0a0a; font-weight: 700; font-size: 1.02rem;
+  padding: 12px 24px; border-radius: 12px; text-decoration: none;
+  box-shadow: 0 8px 22px rgba(255, 221, 0, 0.25);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.coffee-btn:hover { transform: translateY(-2px); text-decoration: none; box-shadow: 0 12px 28px rgba(255, 221, 0, 0.35); }
 
 /* ---------- Footer ---------- */
 .site-footer { background: #0a1120; color: #94A3B8; padding: 40px 26px 30px; text-align: center; }
