@@ -227,6 +227,14 @@ code {
   .footer-inner { flex-direction: column; }
   .hero { padding-top: 64px; }
 }
+/* The hero video is landscape with the phone centered — on a narrow screen the whole frame
+   shrinks and the phone gets tiny. Zoom into the center so the phone reads big; the dark
+   sides that get clipped blend into the page background anyway. */
+@media (max-width: 640px) {
+  .hero-video { max-width: 100%; margin-top: 28px; overflow: hidden; }
+  .hero-video video { width: 232%; margin-left: -66%; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .card { transition: none; }
