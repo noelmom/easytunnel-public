@@ -100,6 +100,7 @@ code {
 .hero-video video {
   display: block; width: 100%; height: auto; border-radius: 20px;
 }
+.hero-video .hv-tall { display: none; }   /* portrait cut, shown only on mobile (below) */
 
 /* ---------- App Store badge ---------- */
 .appstore-badge {
@@ -231,10 +232,11 @@ code {
    shrinks and the phone gets tiny. Zoom into the center so the phone reads big; the dark
    sides that get clipped blend into the page background anyway. */
 @media (max-width: 640px) {
+  /* Swap the wide desktop video for a portrait cut where the phone fills the frame.
+     A real (in-viewport, full-width) video keeps iOS autoplay working. */
   .hero-video { max-width: 100%; margin-top: 28px; }
-  /* Zoom into the phone by cropping (object-fit) rather than scaling the element past the
-     viewport — iOS Safari won't autoplay a video that's mostly off-screen. */
-  .hero-video video { height: 125vw; object-fit: cover; object-position: center; }
+  .hero-video .hv-wide { display: none; }
+  .hero-video .hv-tall { display: block; }
 }
 
 @media (prefers-reduced-motion: reduce) {
