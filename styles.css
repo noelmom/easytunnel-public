@@ -193,7 +193,7 @@ code {
 }
 .closing h2 { font-size: clamp(2rem, 4.6vw, 3rem); margin: 0 0 18px; }
 .closing p { max-width: 600px; margin: 0 auto 30px; color: var(--muted); font-size: 1.12rem; }
-.closing-support { margin-top: 26px; color: var(--muted-2); font-size: 1rem; }
+.closing-support { margin-top: 48px; color: var(--muted-2); font-size: 1rem; }
 .closing-support a { color: var(--green-lt); font-weight: 600; }
 
 /* ---------- Footer ---------- */
