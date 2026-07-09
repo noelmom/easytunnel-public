@@ -231,8 +231,10 @@ code {
    shrinks and the phone gets tiny. Zoom into the center so the phone reads big; the dark
    sides that get clipped blend into the page background anyway. */
 @media (max-width: 640px) {
-  .hero-video { max-width: 100%; margin-top: 28px; overflow: hidden; }
-  .hero-video video { width: 232%; margin-left: -66%; }
+  .hero-video { max-width: 100%; margin-top: 28px; }
+  /* Zoom into the phone by cropping (object-fit) rather than scaling the element past the
+     viewport — iOS Safari won't autoplay a video that's mostly off-screen. */
+  .hero-video video { height: 125vw; object-fit: cover; object-position: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
