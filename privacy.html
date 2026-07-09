@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — EasyTunnel</title>
+  <meta name="description" content="EasyTunnel's privacy policy: no accounts, no telemetry, no data collection. Credentials stay in the on-device iOS Keychain and never leave your device." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#060B08" />
+  <link rel="canonical" href="https://easytunnel.app/privacy" />
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="EasyTunnel home">
+      <img src="assets/icon.png" alt="" width="32" height="32" />
+      <span>EasyTunnel</span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="/">Home</a>
+      <a class="nav-support email" data-user="hello" data-domain="easytunnel.app" data-text="keep" href="#">Support</a>
+    </nav>
+  </header>
+
+  <main id="main" class="legal">
+    <p class="eyebrow">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="legal-updated">Last updated: July 8, 2026</p>
+
+    <p class="legal-lead">EasyTunnel is private by design. The short version: there are no accounts, no telemetry, and no data collection of any kind — nothing leaves your device.</p>
+
+    <h2>No accounts, no data collection</h2>
+    <p>EasyTunnel does not require an account and does not collect, transmit, or sell any personal data. There is no analytics or telemetry. We don't operate any servers that your app talks to.</p>
+
+    <h2>Your credentials stay on your device</h2>
+    <p>SSH passwords and private keys you save are stored in the <strong>iOS Keychain</strong> on your device (protected and not synced to iCloud). They're used only to connect to the servers you configure, and are never sent to us or any third party.</p>
+
+    <h2>Network connections</h2>
+    <p>EasyTunnel connects only to the SSH servers and forwarded ports that <em>you</em> configure. The in-app browser loads only the addresses you enter — typically your own forwarded <code>localhost</code> ports. Host-key fingerprints are pinned locally so you're warned if a server's identity changes.</p>
+
+    <h2>Camera &amp; microphone</h2>
+    <p>If a web app you open in EasyTunnel's in-app browser requests the camera or microphone, iOS asks your permission first — exactly as Safari does. EasyTunnel itself does not access your camera or microphone.</p>
+
+    <h2>Children's privacy</h2>
+    <p>EasyTunnel does not collect data from anyone, including children under 13.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, the updated version will be posted on this page with a new "last updated" date.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about privacy? Email <a class="email" data-user="hello" data-domain="easytunnel.app" href="#">us</a>.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="brand" href="/" aria-label="EasyTunnel home">
+        <img src="assets/icon.png" alt="" width="26" height="26" />
+        <span>EasyTunnel</span>
+      </a>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/">Home</a>
+        <a class="email" data-user="hello" data-domain="easytunnel.app" data-text="keep" href="#">Email</a>
+      </nav>
+    </div>
+    <p class="copyright">© <span id="year">2026</span> EasyTunnel · Simple tunnels. Powerful tools.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('.email').forEach(function (a) {
+      var addr = a.dataset.user + '@' + a.dataset.domain;
+      a.href = 'mailto:' + addr;
+      if (a.dataset.text !== 'keep') a.textContent = addr;
+    });
+  </script>
+</body>
+</html>

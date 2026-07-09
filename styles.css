@@ -186,6 +186,15 @@ code {
 .faq details[open] summary::after { transform: rotate(45deg); }
 .faq details p { margin: 0 0 18px; color: var(--muted); }
 
+/* ---------- Legal / long-form ---------- */
+.legal { max-width: 760px; margin: 0 auto; padding: 72px 26px 96px; }
+.legal h1 { font-size: clamp(2rem, 5vw, 2.8rem); margin: 0 0 8px; }
+.legal-updated { color: var(--muted-2); font-size: 0.9rem; margin: 0 0 28px; }
+.legal-lead { font-size: 1.16rem; color: var(--text); margin: 0 0 8px; }
+.legal h2 { font-size: 1.28rem; margin: 36px 0 10px; }
+.legal p { color: var(--muted); margin: 0 0 14px; }
+.legal a { color: var(--green-lt); }
+
 /* ---------- Closing ---------- */
 .closing {
   text-align: center; padding: 100px 26px; border-top: 1px solid var(--line);
