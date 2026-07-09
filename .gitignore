@@ -1,0 +1,5 @@
+.DS_Store
+**/.DS_Store
+# heavy source assets kept local, not deployed
+assets/demo/*.mov
+assets/EasyTunnel - Simulator Screenshots/
