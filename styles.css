@@ -113,6 +113,13 @@ code {
 .appstore-badge small { font-size: 0.7rem; opacity: 0.82; }
 .appstore-badge strong { font-size: 1.22rem; font-weight: 600; }
 
+/* Launch-state toggle (flip <html data-launch> between "soon" and "live"). */
+[data-launch="soon"] .badge-live { display: none; }
+[data-launch="live"] .badge-soon { display: none; }
+a.appstore-badge { text-decoration: none; cursor: pointer; transition: transform .15s ease, box-shadow .15s ease; }
+a.appstore-badge:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,0.45); }
+a.appstore-badge:focus-visible { outline: 2px solid #21CE76; outline-offset: 3px; }
+
 /* ---------- Phone frame ---------- */
 .phone {
   width: min(290px, 74vw);
