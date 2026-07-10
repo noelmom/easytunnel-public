@@ -3,3 +3,6 @@
 # heavy source assets kept local, not deployed
 assets/demo/*.mov
 assets/EasyTunnel - Simulator Screenshots/
+
+# Wrangler local cache/state
+.wrangler/
