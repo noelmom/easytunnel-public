@@ -5,7 +5,7 @@ port forwarding, a terminal, SFTP, and a code editor.
 
 - Live site: https://easytunnel.app
 - App source: https://github.com/noelmom/easytunnel
-- Status: submitted to the App Store (v1.0, id 6789007010) — pending review
+- Status: **live on the App Store** (v1.0, id 6789007010) — approved 2026-07-15
 
 ## Hosting
 
@@ -18,15 +18,12 @@ auto-deploy.
 npx wrangler pages deploy . --project-name easytunnel
 ```
 
-## Launch flip (when Apple approves)
+## Launch flag (flipped live 2026-07-15)
 
 The "Coming soon" and "Download on the App Store" badges are both in `index.html`, toggled by a
-single flag. To go live:
-
-1. Change `<html data-launch="soon">` → `data-launch="live"` in `index.html`.
-2. Deploy (command above).
-
-Both badges then become live links to https://apps.apple.com/app/id6789007010.
+single flag: `<html data-launch="live">`. It was flipped from `"soon"` and deployed when the app
+was approved; both badges are now live links to https://apps.apple.com/app/id6789007010. To
+revert (e.g. if the app is ever pulled), set it back to `"soon"` and redeploy.
 
 ## Files
 - `index.html` — the page
